@@ -8,7 +8,7 @@
 <article class="resource-card"
   data-title="{{ .Title | lower }}"
   data-desc="{{ .Params.description | lower }}"
-  data-tags="{{ delimit .Params.tags " " | lower }}"
+ data-tags="{{ if .Params.tags }}{{ delimit .Params.tags " " | lower }}{{ end }}"
   data-category="{{ .Params.category | lower }}"
   data-type="{{ $typeBadge | lower }}"
   data-difficulty="{{ .Params.difficulty | lower }}"
