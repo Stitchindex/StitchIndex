@@ -1,5 +1,6 @@
 +++
 title = "Submit a resource"
+url = "/submit/"
 description = "Know a free sewing pattern or guide that should be listed? Submit it here."
 +++
 

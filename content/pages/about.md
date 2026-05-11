@@ -1,5 +1,6 @@
 +++
 title = "About StitchIndex"
+url = "/about/"
 description = "What StitchIndex is and why it exists."
 +++
 
