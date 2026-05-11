@@ -150,6 +150,9 @@ button { font-family: var(--sans); cursor: pointer; }
   overflow-x: auto;
   -ms-overflow-style: none;
   scrollbar-width: none;
+  border-top: none;
+  border-left: none;
+  border-right: none;
 }
 .cat-strip::-webkit-scrollbar { display: none; }
 .cat-strip-inner {
@@ -172,6 +175,7 @@ button { font-family: var(--sans); cursor: pointer; }
   white-space: nowrap;
   transition: color 0.15s;
   cursor: pointer;
+  background: none;
 }
 .cat-tab:hover { color: var(--ink); }
 .cat-tab.active {
