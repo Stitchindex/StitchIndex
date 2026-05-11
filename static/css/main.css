@@ -89,11 +89,13 @@ button { font-family: var(--sans); cursor: pointer; }
 .header-search input::placeholder { color: var(--ink-ghost); }
 .search-icon {
   position: absolute;
-  left: 11px;
+  left: 10px;
   top: 50%;
   transform: translateY(-50%);
   color: var(--ink-muted);
-  font-size: 15px;
+  width: 15px;
+  height: 15px;
+  pointer-events: none;
 }
 .header-nav {
   display: flex;
