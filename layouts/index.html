@@ -1,0 +1,143 @@
+{{ define "main" }}
+
+<!-- ── HERO -->
+<section class="hero">
+  <p class="hero-eyebrow">Free · Curated · Community-built</p>
+  <h1>Every free sewing resource on the internet, organized.</h1>
+  <p class="hero-sub">Patterns, guides, and tutorials for every skill level — from beginner apparel to ultralight backpacking gear. All free, all handpicked.</p>
+  <form class="hero-search" role="search">
+    <input class="search-input" type="search" placeholder="Search patterns, techniques, materials…" aria-label="Search resources" />
+    <button type="submit">Search</button>
+  </form>
+  <div class="hero-stats">
+    {{ $resources := where .Site.RegularPages "Section" "resources" }}
+    {{ $patterns := where $resources ".Params.type_tag" "free-pattern" }}
+    <span class="hero-stat"><strong>{{ len $resources }}</strong> resources</span>
+    <span class="stat-sep"></span>
+    <span class="hero-stat"><strong>{{ len $patterns }}</strong> free patterns</span>
+    <span class="stat-sep"></span>
+    <span class="hero-stat"><strong>6</strong> categories</span>
+    <span class="stat-sep"></span>
+    <span class="hero-stat">always <strong>free</strong></span>
+  </div>
+</section>
+
+<!-- ── CATEGORY STRIP -->
+<nav class="cat-strip" aria-label="Filter by category">
+  <div class="cat-strip-inner">
+    <button class="cat-tab active" data-category="">
+      <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+      All
+    </button>
+    <button class="cat-tab" data-category="apparel">
+      <svg viewBox="0 0 24 24"><path d="M20.38 3.46 16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.57a1 1 0 0 0 .99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2V10h2.15a1 1 0 0 0 .99-.84l.58-3.57a2 2 0 0 0-1.34-2.23z"/></svg>
+      Apparel
+    </button>
+    <button class="cat-tab" data-category="home-goods">
+      <svg viewBox="0 0 24 24"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      Home goods
+    </button>
+    <button class="cat-tab" data-category="outdoor-myog">
+      <svg viewBox="0 0 24 24"><path d="M3 17l4-8 4 4 4-6 4 10"/><path d="M3 20h18"/></svg>
+      Outdoor & MYOG
+    </button>
+    <button class="cat-tab" data-category="kids-baby">
+      <svg viewBox="0 0 24 24"><circle cx="12" cy="5" r="2"/><path d="M12 7v5l-3 3"/><path d="M9 15h6"/><path d="M12 15v5"/></svg>
+      Kids & baby
+    </button>
+    <button class="cat-tab" data-category="quilting-crafts">
+      <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+      Quilting & crafts
+    </button>
+    <button class="cat-tab" data-category="materials-tools">
+      <svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+      Materials & tools
+    </button>
+    {{ $archived := where (where .Site.RegularPages "Section" "resources") ".Params.wayback" true }}
+    {{ if gt (len $archived) 0 }}
+    <button class="cat-tab" data-category="archived">
+      <svg viewBox="0 0 24 24"><polyline points="21 8 21 21 3 21 3 8"/><rect x="1" y="3" width="22" height="5"/><line x1="10" y1="12" x2="14" y2="12"/></svg>
+      Archived
+    </button>
+    {{ end }}
+  </div>
+</nav>
+
+<!-- ── MAIN LAYOUT -->
+<div class="page-wrap">
+
+  <!-- Sidebar -->
+  <aside class="sidebar" aria-label="Filter resources">
+
+    <div class="sidebar-section">
+      <p class="sidebar-heading">Type</p>
+      {{ $resources := where .Site.RegularPages "Section" "resources" }}
+      {{ $patterns := where $resources ".Params.type_tag" "free-pattern" }}
+      {{ $guides := where $resources ".Params.type_tag" "guide" }}
+      {{ $videos := where $resources ".Params.type_tag" "video" }}
+      {{ $archives := where $resources ".Params.type_tag" "archive" }}
+      <div class="sidebar-item" data-filter="type" data-value="free-pattern">
+        Free patterns <span class="sidebar-count">{{ len $patterns }}</span>
+      </div>
+      <div class="sidebar-item" data-filter="type" data-value="guide">
+        Guides <span class="sidebar-count">{{ len $guides }}</span>
+      </div>
+      <div class="sidebar-item" data-filter="type" data-value="video">
+        Videos <span class="sidebar-count">{{ len $videos }}</span>
+      </div>
+      <div class="sidebar-item" data-filter="type" data-value="archive">
+        Archived <span class="sidebar-count">{{ len $archives }}</span>
+      </div>
+    </div>
+
+    <div class="sidebar-section">
+      <p class="sidebar-heading">Difficulty</p>
+      {{ $beginners := where $resources ".Params.difficulty" "beginner" }}
+      {{ $intermediate := where $resources ".Params.difficulty" "intermediate" }}
+      {{ $advanced := where $resources ".Params.difficulty" "advanced" }}
+      <div class="sidebar-item" data-filter="difficulty" data-value="beginner">
+        <span style="display:flex;align-items:center;gap:7px;">
+          <span class="diff-dot beginner"></span> Beginner
+        </span>
+        <span class="sidebar-count">{{ len $beginners }}</span>
+      </div>
+      <div class="sidebar-item" data-filter="difficulty" data-value="intermediate">
+        <span style="display:flex;align-items:center;gap:7px;">
+          <span class="diff-dot intermediate"></span> Intermediate
+        </span>
+        <span class="sidebar-count">{{ len $intermediate }}</span>
+      </div>
+      <div class="sidebar-item" data-filter="difficulty" data-value="advanced">
+        <span style="display:flex;align-items:center;gap:7px;">
+          <span class="diff-dot advanced"></span> Advanced
+        </span>
+        <span class="sidebar-count">{{ len $advanced }}</span>
+      </div>
+    </div>
+
+  </aside>
+
+  <!-- Resource grid -->
+  <main>
+    <div class="content-header">
+      <h2 class="content-title">All resources <span class="result-count">{{ len (where .Site.RegularPages "Section" "resources") }}</span></h2>
+      <div class="sort-control">
+        Sort by
+        <select class="sort-select" aria-label="Sort resources">
+          <option value="newest">Newest</option>
+          <option value="alpha">A–Z</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="resource-grid">
+      {{ range where .Site.RegularPages "Section" "resources" }}
+      {{ partial "resource-card.html" . }}
+      {{ end }}
+    </div>
+
+  </main>
+
+</div>
+
+{{ end }}

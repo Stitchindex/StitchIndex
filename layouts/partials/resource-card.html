@@ -1,0 +1,49 @@
+{{ $typeBadge := .Params.type_tag | default "guide" }}
+{{ $badgeClass := "badge-guide" }}
+{{ $badgeLabel := "Guide" }}
+{{ if eq $typeBadge "free-pattern" }}{{ $badgeClass = "badge-pattern" }}{{ $badgeLabel = "Free pattern" }}{{ end }}
+{{ if eq $typeBadge "video" }}{{ $badgeClass = "badge-video" }}{{ $badgeLabel = "Video" }}{{ end }}
+{{ if eq $typeBadge "archive" }}{{ $badgeClass = "badge-archive" }}{{ $badgeLabel = "Archive" }}{{ end }}
+
+<article class="resource-card"
+  data-title="{{ .Title | lower }}"
+  data-desc="{{ .Params.description | lower }}"
+  data-tags="{{ delimit .Params.tags " " | lower }}"
+  data-category="{{ .Params.category | lower }}"
+  data-type="{{ $typeBadge | lower }}"
+  data-difficulty="{{ .Params.difficulty | lower }}"
+  data-date="{{ .Date.Format "2006-01-02" }}">
+
+  <div class="card-top">
+    <div class="card-badges">
+      <span class="badge {{ $badgeClass }}">{{ $badgeLabel }}</span>
+      {{ if .Params.wayback }}<span class="badge badge-wayback">↩ Wayback</span>{{ end }}
+    </div>
+    <a href="{{ .Params.url }}" target="_blank" rel="noopener noreferrer" class="card-ext-link" aria-label="Visit {{ .Title }}">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+    </a>
+  </div>
+
+  <h3 class="card-title">{{ .Title }}</h3>
+
+  {{ with .Params.description }}
+  <p class="card-desc">{{ . }}</p>
+  {{ end }}
+
+  <div class="card-footer">
+    <span class="card-source">{{ .Params.source }}</span>
+    <div style="display:flex;align-items:center;gap:8px;">
+      {{ with .Params.difficulty }}
+      <span class="card-difficulty">
+        <span class="diff-dot {{ . }}"></span>{{ . }}
+      </span>
+      {{ end }}
+      {{ if .Params.tags }}
+      <div class="card-tags">
+        {{ range first 2 .Params.tags }}<span class="tag">{{ . }}</span>{{ end }}
+      </div>
+      {{ end }}
+    </div>
+  </div>
+
+</article>

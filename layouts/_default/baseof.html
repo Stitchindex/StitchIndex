@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{ if .IsHome }}{{ .Site.Title }} — {{ .Site.Params.description }}{{ else }}{{ .Title }} · {{ .Site.Title }}{{ end }}</title>
+  <meta name="description" content="{{ if .Params.description }}{{ .Params.description }}{{ else }}{{ .Site.Params.description }}{{ end }}" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="{{ .Title }} · {{ .Site.Title }}" />
+  <meta property="og:description" content="{{ .Site.Params.description }}" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="{{ .Permalink }}" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="/css/main.css" />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="{{ .Permalink }}" />
+</head>
+<body>
+
+  <!-- ── HEADER -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="/" class="site-logo">
+        <span class="logo-word">StitchIndex</span>
+        <span class="logo-dot">·</span>
+      </a>
+
+      <div class="header-search">
+        <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input class="search-input" type="search" placeholder="Search patterns, guides, techniques…" aria-label="Search resources" />
+      </div>
+
+      <nav class="header-nav">
+        <a href="/categories/apparel/">Apparel</a>
+        <a href="/categories/outdoor-myog/">Outdoor & MYOG</a>
+        <a href="/categories/home-goods/">Home goods</a>
+        <a href="/submit/" class="submit-link">Submit a link</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ── PAGE CONTENT -->
+  {{ block "main" . }}{{ end }}
+
+  <!-- ── FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span class="footer-logo">StitchIndex</span>
+      <nav class="footer-links">
+        <a href="/">Home</a>
+        <a href="/about/">About</a>
+        <a href="/submit/">Submit a link</a>
+      </nav>
+      <span class="footer-copy">Free to use · No ads · Curated with care</span>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+{{ define "main" }}
+<div class="page-wrap" style="grid-template-columns:1fr;max-width:760px;">
+  <main>
+    <article style="background:var(--paper-card);border:1px solid var(--seam);border-radius:var(--radius-lg);padding:32px;">
+      <h1 style="font-family:var(--serif);font-size:28px;font-weight:400;margin-bottom:20px;">{{ .Title }}</h1>
+      <div style="font-size:14px;color:var(--ink-soft);line-height:1.8;">{{ .Content }}</div>
+    </article>
+  </main>
+</div>
+{{ end }}

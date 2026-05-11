@@ -1,0 +1,35 @@
+{{ define "main" }}
+
+<section class="hero" style="padding:36px 24px 32px;">
+  <p class="hero-eyebrow">Category</p>
+  <h1 style="font-size:32px;">{{ .Title }}</h1>
+  <p class="hero-sub">{{ len .Pages }} resources in this category</p>
+</section>
+
+<div class="page-wrap">
+  <aside class="sidebar">
+    <div class="sidebar-section">
+      <p class="sidebar-heading">All categories</p>
+      <a class="sidebar-item" href="/">All resources</a>
+      <a class="sidebar-item" href="/categories/apparel/">Apparel</a>
+      <a class="sidebar-item" href="/categories/home-goods/">Home goods</a>
+      <a class="sidebar-item" href="/categories/outdoor-myog/">Outdoor & MYOG</a>
+      <a class="sidebar-item" href="/categories/kids-baby/">Kids & baby</a>
+      <a class="sidebar-item" href="/categories/quilting-crafts/">Quilting & crafts</a>
+      <a class="sidebar-item" href="/categories/materials-tools/">Materials & tools</a>
+    </div>
+  </aside>
+
+  <main>
+    <div class="content-header">
+      <h2 class="content-title">{{ .Title }} <span>{{ len .Pages }}</span></h2>
+    </div>
+    <div class="resource-grid">
+      {{ range .Pages }}
+      {{ partial "resource-card.html" . }}
+      {{ end }}
+    </div>
+  </main>
+</div>
+
+{{ end }}

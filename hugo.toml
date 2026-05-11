@@ -1,0 +1,21 @@
+baseURL = "https://stitchindex.netlify.app/"
+languageCode = "en-us"
+title = "StitchIndex"
+theme = ""
+paginate = 24
+
+[params]
+  description = "The free sewing resource directory — patterns, guides, and tutorials curated from across the web."
+  tagline = "Every free sewing resource on the internet, organized."
+  author = "StitchIndex"
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+  type = "types"
+  difficulty = "difficulties"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
