@@ -1,6 +1,7 @@
 baseURL = "https://stitchindex.netlify.app/"
 languageCode = "en-us"
 title = "StitchIndex"
+theme = ""
 paginate = 24
 
 [params]

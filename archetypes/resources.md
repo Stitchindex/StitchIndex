@@ -1,7 +1,7 @@
 +++
 title = "{{ replace .File.ContentBaseName "-" " " | title }}"
 date = {{ .Date }}
-url = ""
+link = ""
 category = ""        # apparel | home-goods | outdoor-myog | kids-baby | quilting-crafts | materials-tools
 type_tag = ""        # free-pattern | guide | video | archive
 difficulty = ""      # beginner | intermediate | advanced

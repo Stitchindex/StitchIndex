@@ -1,7 +1,7 @@
 +++
 title = "Lined rod-pocket curtains — full window treatment guide"
 date = 2024-02-05
-url = "https://www.marthastewart.com/how-to-sew-curtains"
+link = "https://www.marthastewart.com/how-to-sew-curtains"
 category = "home-goods"
 type_tag = "guide"
 difficulty = "beginner"
@@ -15,7 +15,7 @@ draft = false
 +++
 title = "Zippered throw pillow cover — any size"
 date = 2024-02-18
-url = "https://thesewingdirectory.co.uk/how-to-sew-cushion-cover-zip/"
+link = "https://thesewingdirectory.co.uk/how-to-sew-cushion-cover-zip/"
 category = "home-goods"
 type_tag = "guide"
 difficulty = "beginner"
@@ -29,7 +29,7 @@ draft = false
 +++
 title = "Simple envelope pillowcase — no zipper beginner project"
 date = 2024-03-01
-url = "https://www.thesprucecrafts.com/envelope-pillowcase-sewing-tutorial-4157055"
+link = "https://www.thesprucecrafts.com/envelope-pillowcase-sewing-tutorial-4157055"
 category = "home-goods"
 type_tag = "guide"
 difficulty = "beginner"
@@ -43,7 +43,7 @@ draft = false
 +++
 title = "Log cabin quilt block — complete beginner tutorial"
 date = 2024-01-25
-url = "https://www.allpeoplequilt.com/quilts/log-cabin-quilt-block"
+link = "https://www.allpeoplequilt.com/quilts/log-cabin-quilt-block"
 category = "quilting-crafts"
 type_tag = "guide"
 difficulty = "beginner"
@@ -57,7 +57,7 @@ draft = false
 +++
 title = "Free jelly roll quilt pattern — 40 blocks"
 date = 2024-02-22
-url = "https://www.fatquartershop.com/free-jelly-roll-quilt-pattern/"
+link = "https://www.fatquartershop.com/free-jelly-roll-quilt-pattern/"
 category = "quilting-crafts"
 type_tag = "free-pattern"
 difficulty = "beginner"
@@ -71,7 +71,7 @@ draft = false
 +++
 title = "Reversible baby wrap — sewn & no-sew versions"
 date = 2024-03-08
-url = "https://www.youtube.com/watch?v=baby-wrap-myog"
+link = "https://www.youtube.com/watch?v=baby-wrap-myog"
 category = "kids-baby"
 type_tag = "video"
 difficulty = "beginner"
@@ -85,7 +85,7 @@ draft = false
 +++
 title = "Free stuffed animal patterns — 12 designs"
 date = 2024-03-20
-url = "https://www.favecrafts.com/Sewing-for-Kids/Free-Stuffed-Animal-Patterns"
+link = "https://www.favecrafts.com/Sewing-for-Kids/Free-Stuffed-Animal-Patterns"
 category = "kids-baby"
 type_tag = "free-pattern"
 difficulty = "beginner"
@@ -99,7 +99,7 @@ draft = false
 +++
 title = "Fabric selection guide for MYOG — silnylon, DCF, Robic, gridstop"
 date = 2024-01-30
-url = "https://www.wildernessinnovation.com/fabric-selection/"
+link = "https://www.wildernessinnovation.com/fabric-selection/"
 category = "materials-tools"
 type_tag = "guide"
 difficulty = "beginner"
@@ -113,7 +113,7 @@ draft = false
 +++
 title = "Beginner's guide to sewing machine feet — what they all do"
 date = 2024-02-12
-url = "https://www.sewing.com/sewing-machine-feet-guide/"
+link = "https://www.sewing.com/sewing-machine-feet-guide/"
 category = "materials-tools"
 type_tag = "guide"
 difficulty = "beginner"

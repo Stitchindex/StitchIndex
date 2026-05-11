@@ -1,7 +1,7 @@
 +++
 title = "Ray Jardine tarp & bivy system — original cutting diagrams"
 date = 2024-01-10
-url = "https://web.archive.org/web/20230601000000*/rayjardine.com/ray-way/Tarp-Book/"
+link = "https://web.archive.org/web/20230601000000*/rayjardine.com/ray-way/Tarp-Book/"
 category = "outdoor-myog"
 type_tag = "free-pattern"
 difficulty = "intermediate"
@@ -15,7 +15,7 @@ draft = false
 +++
 title = "Frameless 40L pack — complete construction walkthrough"
 date = 2024-01-18
-url = "https://backpackinglight.com/forums/topic/frameless-pack-construction/"
+link = "https://backpackinglight.com/forums/topic/frameless-pack-construction/"
 category = "outdoor-myog"
 type_tag = "guide"
 difficulty = "advanced"
@@ -29,7 +29,7 @@ draft = false
 +++
 title = "Ultralight wind shirt — free pattern & instructions"
 date = 2024-02-14
-url = "https://www.reddit.com/r/myog/comments/windshirt_pattern/"
+link = "https://www.reddit.com/r/myog/comments/windshirt_pattern/"
 category = "outdoor-myog"
 type_tag = "free-pattern"
 difficulty = "beginner"
@@ -43,7 +43,7 @@ draft = false
 +++
 title = "Down quilt from scratch — beginner three-part series"
 date = 2024-02-28
-url = "https://www.youtube.com/watch?v=backpacking-quilt-myog"
+link = "https://www.youtube.com/watch?v=backpacking-quilt-myog"
 category = "outdoor-myog"
 type_tag = "video"
 difficulty = "intermediate"
@@ -57,7 +57,7 @@ draft = false
 +++
 title = "Cuben fiber stuff sack — simple beginner MYOG project"
 date = 2024-03-12
-url = "https://www.ultralightoutdoorgear.co.uk/diy-cuben-stuff-sack/"
+link = "https://www.ultralightoutdoorgear.co.uk/diy-cuben-stuff-sack/"
 category = "outdoor-myog"
 type_tag = "guide"
 difficulty = "beginner"
@@ -71,7 +71,7 @@ draft = false
 +++
 title = "Backpacking.net early MYOG forum archives — 2002–2008"
 date = 2024-01-05
-url = "https://web.archive.org/web/2005*/backpacking.net/phpBB/viewforum.php"
+link = "https://web.archive.org/web/2005*/backpacking.net/phpBB/viewforum.php"
 category = "outdoor-myog"
 type_tag = "archive"
 difficulty = "intermediate"
