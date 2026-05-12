@@ -1,5 +1,5 @@
 +++
-title = "40L travel backpack — max carry-on free pattern"
+title = "40L travel backpack — max carry-on"
 date = 2025-01-01
 link = "https://www.myogtutorials.com/40l-travel-backpack-max-carry-on/"
 category = "outdoor-myog"
